@@ -16,25 +16,40 @@
 			{!!Form::open(array('url'=>'agenda/view_agenda','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
             <div class="form-group">
-            	<label for="data_agendamento">Data Agendamento</label>
-            	<input type="text" name="data_agendamento" class="form-control" placeholder="data agendamento">
-            </div>
-            <div class="form-group">
-            	<label for="hora_agendamento">Hora Agendamento</label>
-            	<input type="text" name="hora_agendamento" class="form-control" placeholder="hora Agendamento">
-            </div>
-            <div class="form-group">
-            	<label for="data_atendimento'">Data Atendimento</label>
-            	<input type="text" name="data_atendimento'" class="form-control" placeholder="data Atendimento">
-            </div>
-            <div class="form-group">
-            	<label for="hora_atendimento">Hora Atendimento</label>
-            	<input type="text" name="hora_atendimento" class="form-control" placeholder="hora Atendimento">
-            </div>
-            <div class="form-group">
-            	<button class="btn btn-primary" type="submit">Salvar</button>
-            	<button class="btn btn-danger" type="reset">Cancelar</button>
-            </div>
+                        <label for="id_agendamento">Id Agendamento</label>
+                        <input type="text" name="id_agendamento" class="form-control" placeholder="id">
+                  </div>
+                  <div class="form-group">
+                        <label for="id_medico">Id medico</label>
+                        <input type="text" name="id_medico" class="form-control" placeholder="Medico">
+                  </div>
+                    <div class="form-group">
+                        <label for="paciente_id_paciente">Id Paciente</label>
+                        <input type="text" name="id_paciente" class="form-control" placeholder="Paciente">
+                  </div>
+
+                  <div class="form-group">
+                  	<label for="data_agendamento">Data Agendamento</label>
+                  	<input type="text" name="data_agendamento" class="form-control" placeholder="data agendamento">
+                  </div>
+                  <div class="form-group">
+                  	<label for="hora_agendamento">Hora Agendamento</label>
+                  	<input type="text" name="hora_agendamento" class="form-control" placeholder="hora Agendamento">
+                  </div>
+                  <div class="form-group">
+                  	<label for="data_atendimento">Data Atendimento</label>
+                  	<input type="text" name="data_atendimento" class="form-control" placeholder="data Atendimento">
+                  </div>
+                  <div class="form-group">
+                  	<label for="hora_atendimento">Hora Atendimento</label>
+                  	<input type="text" name="hora_atendimento" class="form-control" placeholder="hora Atendimento">
+                  </div>
+              
+                  <div class="form-group">
+                  	<button class="btn btn-primary" type="submit">Salvar</button>
+                  	<button class="btn btn-danger"  type="reset">Cancelar</button>
+                  </div>
+            
 
 			{!!Form::close()!!}		
             

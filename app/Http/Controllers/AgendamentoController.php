@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use SistemasMazza\Agendamento;
+use App\Agendamento;
 use Illuminate\Support\Facades\Redirect;
-use SistemasMazza\Http\Requests\AgendamentoFormRequest;
+use App\Http\Requests\AgendamentoFormRequest;
 use DB;
+
+
 
 class AgendamentoController extends Controller
 {
@@ -29,12 +31,16 @@ public function create(){
 }	
 public function store(AgendamentoFormRequest $request){
 	$agendamento = new Agendamento;
-	$agendamento->data_agendamento	  =$request->get ('data_agendamento');
-	$agendamento->hora_agendamento 	  =$request->get ('hora_agendamento');
-	$agendamento->data_atendimento	  =$request->get ('data_atendimento');
-	$agendamento->hora_atendimento    =$request->get ('hora_atendimento');
+	$agendamento->id_agendamento  =$request->get ('id_agendamento');
+	$agendamento->id_medico       =$request->get ('id_medico');
+	$agendamento->id_paciente     =$request->get ('id_paciente');
+	$agendamento->data_agendamento=$request->get ('data_agendamento');
+	$agendamento->hora_agendamento=$request->get ('hora_agendamento');
+	$agendamento->data_atendimento=$request->get ('data_atendimento');
+	$agendamento->hora_atendimento=$request->get ('hora_atendimento');	
 	$agendamento->save();
 	return Redirect::to('agenda/view_agenda');
+	     
 
 }
 
@@ -47,13 +53,14 @@ public function edit($id){
 	["agendamento"->Agendamento::findOrFail($id)]);
 }
 public function update(AgendamentoFormRequest 	$request, $id){
-		$agendamento=Agendamento::findOrFail($id);	
+		$agendamento = Agendamento::findOrFail($id);	
 	  	$agendamento->data_agendamento    =$request->get('data_agendamento');
 		$agendamento->hora_agendamento	  =$request->get('hora_agendamento');
 		$agendamento->data_atendimento	  =$request->get('data_atendimento');
 		$agendamento->hora_atendimento    =$request->get('hora_atendimento');
 		$agendamento->update();
 		return Redirect::to('agenda.view_agenda');
+
 }
 public function destroy($id){
 	$agendamento=Agendamento::findOrFail($id);

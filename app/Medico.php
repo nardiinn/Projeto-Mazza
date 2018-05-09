@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Medico extends Model
 {
     protected $table = 'medico';
-    protected $primarykey = 'id_medico';
+    protected $primaryKey = 'id_medico';
 
-    public $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = [
-    'nome_end',
+    'nome_med',
     'especializacao_med',
     'crm_med',
 ];

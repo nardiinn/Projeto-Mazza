@@ -24,7 +24,8 @@ class UsuarioFormRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            'nome_usuarios'   => 'required | max:20',
+            'senha_usuarios'  => 'required | max:6',
         ];
     }
 }

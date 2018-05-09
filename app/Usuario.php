@@ -6,8 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends Model
 {
-    protected $table = 'user';
-    protected $primarykey = 'id_user';
+    protected $table = 'usuarios';
+    protected $primarykey = 'id_usuarios';
 
-    public $timestamp = false;
+    public $timestamps = false;
+    
+    protected $fillable = [
+    'nome_usuario',
+    'senha'
+];
+protected $guarded = [];
 }

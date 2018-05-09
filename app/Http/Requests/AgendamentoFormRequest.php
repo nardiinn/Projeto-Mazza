@@ -3,9 +3,11 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use SistemasMazza\Http\Requests\Request;
-use Illuminate\Http\Request;
-use SistemasMazza\Http\Requests\AgendamentoFormRequest\Requests;
+use App\Http\Requests\Request;
+//use Illuminate\Http\Request;
+use db_sistemamazza;
+
+
 
 class AgendamentoFormRequest extends FormRequest
 {
@@ -27,10 +29,11 @@ class AgendamentoFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'data_agendamento' => 'required | max:6',
-            'hora_agendamento' => 'required | max:6',
-            'data_atendimento' => 'required | max:6',
-            'hora_atendimento' => 'required | max:6',
+           
+            'data_agendamento' => 'required | max:10',
+            'hora_agendamento' => 'required | max:10',
+            'data_atendimento' => 'required | max:10',
+            'hora_atendimento' => 'required | max:10',
         ];
     }
 }

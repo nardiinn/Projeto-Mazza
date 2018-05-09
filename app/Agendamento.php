@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Agendamento extends Model
 {
     protected $table = 'agendamento';
-    protected $primarykey = 'id_agendamento';
+    protected $primaryKey = 'id_agendamento';
 
-    public $timestamp = false;	
+    public $timestamps = false;	
 
     public $fillable = [
     	'data_agendamento',

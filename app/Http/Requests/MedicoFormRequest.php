@@ -26,7 +26,7 @@ class MedicoFormRequest extends FormRequest
         return [
         'nome_end'           => 'required | max:45' ,
         'especializacao_med' => 'required | max:45',
-        'crm_med'            => 'required | max:45'
+        'crm_med'            => 'required | max:45',
         ];
     }
 }

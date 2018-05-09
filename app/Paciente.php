@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Paciente extends Model
 {
     protected $table = 'paciente';
-    protected $primarykey = 'id_paciente';
+    protected $primaryKey = 'id_paciente';
 
-    public $timestamp = false;
+    public $timestamps = false;
 
     protected $fillable = [
     'nome_paciente',
@@ -17,7 +17,8 @@ class Paciente extends Model
     'cpf_paciente',
     'end_paciente',
     'cidadade_paciente',
-    'cep_paciente'
+    'cep_paciente',
 ];
+protected $guarded = [];
 
 }

@@ -147,9 +147,9 @@
      
 
       
-    <!-- jQuery 2.1.4 -->
+    <!-- jQuery  -->
     <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
-    <!-- Bootstrap 3.3.5 -->
+    <!-- Bootstrap  -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
